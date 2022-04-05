@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62,5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "section"
+    "footer";
+}
+
+.imagenUno{
+    width: 100%;
+}
+
+#footer{
+    width: 100%;
+    height: 40px;
+    background:whitesmoke;
+    position: fixed;
+    bottom: 0%;
+    text-align: center;
+}
+
+
+
+/*Todo lo relacionado al index*/
+h1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 25px 25px;
+    background-color: aqua;
+
+}
+/*lo relacionado al menu*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9vw;
+    width: 100%;
+    grid-area: nav;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.menu  li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu li a{
+    display: flex;
+    padding: 15px 20px;
+    color:blue;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+
+/*todo lo relacionado al main*/
+
+.h1{
+    width: 300px;
+    height: 300px;
+    margin: 45px;
+    padding: 45px;
+}
+
+.parrafo_azul{
+    font-style: italic;
+    font-weight: bold;
+    display: grid;
+
+}
+
+.colormenu{
+    font-family: sans-serif;
+    text-align: center;
+    margin: 30px;
+}
+/*todo lo relacionado al footer*/
+
+ul{
+    list-style-type: none;
+}
+
+/*Todo lo relacionado a contactanos*/
+
+.menuFormulario{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.formulario{
+    width: 100%;
+    background: whitesmoke;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 5px;
+
+}
+
+.boton{
+    border-radius: 5px;
+    margin: 8px;
+    padding: 8px;
+}
+
+/*Todo lo relacionado al top diez*/
+
+.divVideos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    float: inline-start;
+}
+
+/*todo lo relacionado al staff*/
+
+.staff{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: inline-start;
+    margin: 20px;
+    padding: 20px;
+
+}
+
+.staff li{
+    text-align: center;
+}
+
+/*Todo lo relacionado a sponsors*/
+
+.sponsorsOrdenados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 150px;
+    height: 150px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .contenedorPadre{
+        grid-template-columns:1fr ;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        "head"
+        "main"
+        "section"
+        "footer" ;
+    }
+    .imagen{
+        width: 100%;
+    }
+    .menu{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .mainIndex{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .tituloIndex{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+}
+    
+    
+/*Todo lo relacionado al top diez*/
+
+.videosSecta{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+}
+.divVideos{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px){
+    .contenedor{
+        grid-template-columns:1fr ;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        "head"
+        "nav"
+        "section"
+        "footer" ;
+    }
+    .menu{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .videosSecta{
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: blueviolet;
+    }
+    .bannerTopDiez{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .contenedor{
+        grid-template-columns:1fr ;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        "head head"
+        "nav nav"
+        "section section"
+        "footer footer" ;
+    }
+    .menu{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .videosSecta{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .bannerTopDiez{
+        max-width: 100%;
+    }
+}
