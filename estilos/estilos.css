@@ -8,12 +8,16 @@ html{
 }
 
 body{
-    display: grid;
-    grid-template-areas: 
-    "nav"
-    "main"
-    "section"
-    "footer";
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url(../imagenes/estadiodefondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: local;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 .imagenUno{
@@ -29,50 +33,14 @@ body{
     text-align: center;
 }
 
-
-
 /*Todo lo relacionado al index*/
 h1{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     text-align: center;
     margin: 25px 25px;
-    background-color: aqua;
-
-}
-/*lo relacionado al menu*/
-
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9vw;
-    width: 100%;
-    grid-area: nav;
+    background-color: whitesmoke;
+    border-radius: 5px;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 40%;
-}
-
-.menu  li{
-    position: relative;
-    display: inline-block;
-}
-
-.menu li a{
-    display: flex;
-    padding: 15px 20px;
-    color:blue;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: none;
-}
 
 /*todo lo relacionado al main*/
 
@@ -81,12 +49,16 @@ nav ul{
     height: 300px;
     margin: 45px;
     padding: 45px;
+    border-radius: 5px;
 }
 
 .parrafo_azul{
     font-style: italic;
     font-weight: bold;
-    display: grid;
+    background-color: whitesmoke;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 5px;
 
 }
 
@@ -97,9 +69,9 @@ nav ul{
 }
 /*todo lo relacionado al footer*/
 
-ul{
+/*ul{
     list-style-type: none;
-}
+}*/
 
 /*Todo lo relacionado a contactanos*/
 
@@ -150,11 +122,18 @@ ul{
     float: inline-start;
     margin: 20px;
     padding: 20px;
-
+}
+.staff :hover{
+    transform: matrix3d(1.0);
 }
 
 .staff li{
     text-align: center;
+    background-color: whitesmoke;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    list-style: none;
 }
 
 /*Todo lo relacionado a sponsors*/
@@ -168,49 +147,10 @@ ul{
 }
 
 
-@media screen and (max-width: 480px) {
-    .contenedorPadre{
-        grid-template-columns:1fr ;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr;
-        grid-template-areas:
-        "head"
-        "main"
-        "section"
-        "footer" ;
-    }
-    .imagen{
-        width: 100%;
-    }
-    .menu{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .mainIndex{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .tituloIndex{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    #footer{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    
-}
-    
-    
 /*Todo lo relacionado al top diez*/
 
-.videosSecta{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-}
 .divVideos{
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
