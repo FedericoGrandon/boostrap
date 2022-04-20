@@ -1,0 +1,17 @@
+$futbol: torneo;
+body{
+    @if $futbol == qatar {
+        background-color: whitesmoke;
+    } @else if $futbol == torneo {
+        background-color: red;
+        padding: 15px;
+    }
+}
+
+section{
+    @if $ancho < 1000 px{
+        background-color: purple;
+        padding: 25px;
+        
+    }
+}
