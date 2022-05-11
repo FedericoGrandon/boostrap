@@ -11,7 +11,7 @@ body{
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-image: url(../imagenes/estadiodefondo.jpg);
+    background-image: url(../imagenes/estadiogenerico.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     height: 1800px;
@@ -131,12 +131,11 @@ h1{
 
 /*Todo lo relacionado a sponsors*/
 
-.sponsorsOrdenados{
+.Video{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 150px;
-    height: 150px;
+    align-items: center;
+    margin: 25px;
+    padding: 20px;
 }
 
 
@@ -147,16 +146,30 @@ h1{
     flex-wrap: wrap;
 }
 
+/*Todo lo relacionado al mediakit*/
+.mediaKit{
+    display: inline-flex;
+    margin: 30px;
+    padding: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 480px){
-    .contenedor{
-        grid-template-columns:1fr ;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr;
-        grid-template-areas:
-        "head"
-        "nav"
-        "section"
-        "footer" ;
+    .container-fluid{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
+
+
     .menu{
         flex-direction: column;
         flex-wrap: wrap;
@@ -165,6 +178,7 @@ h1{
         flex-direction: column;
         flex-wrap: wrap;
         background-color: blueviolet;
+        max-width: 100%;
     }
     .bannerTopDiez{
         max-width: 100%;
@@ -172,15 +186,12 @@ h1{
 }
 
 @media screen and (max-width:768px) {
-    .contenedor{
-        grid-template-columns:1fr ;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr;
-        grid-template-areas:
-        "head head"
-        "nav nav"
-        "section section"
-        "footer footer" ;
+    .container-fluid{
+        display: flex ;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
+
     .menu{
         flex-direction: column;
         flex-wrap: wrap;
