@@ -21,7 +21,7 @@ body{
 }
 
 .imagenUno{
-    width: 100%;
+    max-width: 100%;
 }
 
 #footer{
@@ -163,44 +163,76 @@ h1{
 
 
 @media screen and (max-width: 480px){
+    html , body{
+        max-width: 100%;
+        overflow: hidden;
+    }
     .container-fluid{
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      justify-items: center;
     }
 
 
-    .menu{
+    .contenedorPadre{
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .videosSecta{
+    .divVideos{
         flex-direction: column;
         flex-wrap: wrap;
         background-color: blueviolet;
         max-width: 100%;
+        justify-content: center;
     }
     .bannerTopDiez{
+        max-width: 100%;
+    }
+    .staff{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .imagenUno{
         max-width: 100%;
     }
 }
 
 @media screen and (max-width:768px) {
+    html , body{
+        max-width: 100%;
+        overflow: hidden;
+    }
     .container-fluid{
         display: flex ;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-items: center;
     }
 
-    .menu{
+    .contenedorPadre{
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .videosSecta{
+    .divVideos{
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: center;
+        
     }
     .bannerTopDiez{
+        max-width: 100%;
+    }
+    .staff{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .imagenUno{
         max-width: 100%;
     }
 }
